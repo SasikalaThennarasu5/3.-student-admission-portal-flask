@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <div class="card-body">
+    <h4>Application #{{ applicant.id }} - {{ applicant.full_name }}</h4>
+    <p><strong>Course:</strong> {{ applicant.course }}</p>
+    <p><strong>Email:</strong> {{ applicant.email }}</p>
+    <p><strong>Phone:</strong> {{ applicant.phone }}</p>
+    <p><strong>DOB:</strong> {{ applicant.dob or '-' }}</p>
+    <p><strong>Applied:</strong> {{ applicant.applied_at.strftime('%Y-%m-%d %H:%M') }}</p>
+    <p><strong>Status:</strong> {{ applicant.status }}</p>
+
+    <form method="post" class="mt-3">
+      <div class="mb-3">
+        <label class="form-label">Remark (optional)</label>
+        <textarea name="remark" class="form-control">{{ applicant.remark or '' }}</textarea>
+      </div>
+      <button name="action" value="approve" class="btn btn-success">Approve</button>
+      <button name="action" value="reject" class="btn btn-danger">Reject</button>
+      <a href="{{ url_for('admin_panel') }}" class="btn btn-link">Back</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

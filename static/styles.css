@@ -1,0 +1,5 @@
+body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background: #f4f8fb; color:#213547; }
+.card { border-radius: 12px; }
+.btn-primary { background: linear-gradient(90deg,#0066cc,#00aaff); border: none; }
+.btn-success { background: linear-gradient(90deg,#28a745,#20c997); border: none; }
+.hero { max-height: 300px; }

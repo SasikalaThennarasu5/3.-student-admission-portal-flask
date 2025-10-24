@@ -1,0 +1,8 @@
+<!-- Simple SVG placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e6f7ff"/>
+  <g fill="#0066cc">
+    <circle cx="320" cy="80" r="40" />
+    <rect x="40" y="40" width="220" height="180" rx="12" fill="#00aaff"/>
+  </g>
+</svg>

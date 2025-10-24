@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h3 class="card-title">Student Registration Form</h3>
+    <form method="POST" class="mt-3">
+      <div class="mb-3">
+        <label class="form-label">Full name *</label>
+        <input class="form-control" name="full_name" required>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email *</label>
+          <input type="email" class="form-control" name="email" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Phone *</label>
+          <input class="form-control" name="phone" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Course *</label>
+        <select class="form-select" name="course" required>
+          <option value="">-- select course --</option>
+          <option>B.Sc Computer Science</option>
+          <option>B.Com</option>
+          <option>B.A English</option>
+          <option>B.Tech</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date of birth</label>
+        <input type="date" class="form-control" name="dob">
+      </div>
+      <button class="btn btn-success">Submit Application</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
